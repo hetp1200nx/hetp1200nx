@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Timesheet</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 30px; color: #333; }
+        
+        .controls { 
+            margin-bottom: 20px; 
+            background: #f8f9fa; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid #ddd; 
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        th { background-color: #007bff; color: white; }
+        
+        .header-table { margin-bottom: 20px; border: none; }
+        .header-table td { text-align: left; font-weight: bold; width: 25%; border: none; padding: 5px; }
+        
+        input[type="time"], input[type="text"], select { 
+            padding: 6px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            width: 90%;
+        }
+
+        .status-select { font-weight: bold; cursor: pointer; }
+        .status-holiday { background-color: #e7f3ff; color: #007bff; }
+        .status-absent { background-color: #ffe7e7; color: #dc3545; }
+        
+        .total-row { background-color: #f2f2f2; font-weight: bold; font-size: 1.1em; }
+        .disabled-input { background-color: #eee; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <strong>Month:</strong>
+        <select id="monthSelect" onchange="generateSheet()"></select>
+        <strong>Year:</strong>
+        <select id="yearSelect" onchange="generateSheet()"></select>
+    </div>
+
+    <h2 id="sheetTitle">Attendance Sheet</h2>
+
+    <table class="header-table">
+        <tr>
+            <td>Name</td><td><input type="text" id="empName" placeholder="Enter Name"></td>
+            <td>Grand Total (Hours)</td><td id="grand-total">0.00</td>
+        </tr>
+        <tr>
+            <td>Employee Id</td><td><input type="text" id="empId" placeholder="Enter ID"></td>
+            <td>Total OT Hours</td><td id="grand-ot">0.00</td>
+        </tr>
+    </table>
+
+    <table id="timesheet">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Status</th>
+                <th>In Time</th>
+                <th>Out Time</th>
+                <th>Total Hours</th>
+                <th>OT Hours</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="4" style="text-align: right; padding-right: 20px;">Monthly Totals:</td>
+                <td id="footer-total">0.00</td>
+                <td id="footer-ot">0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const standardShift = 8.5;
+
+        const now = new Date();
+        const monthSelect = document.getElementById('monthSelect');
+        const yearSelect = document.getElementById('yearSelect');
+
+        // Initialize Dropdowns
+        monthNames.forEach((m, i) => {
+            let opt = new Option(m, i);
+            if (now.getMonth() === i) opt.selected = true;
+            monthSelect.add(opt);
+        });
+
+        for(let i = now.getFullYear()-1; i <= now.getFullYear()+2; i++) {
+            let opt = new Option(i, i);
+            if (now.getFullYear() === i) opt.selected = true;
+            yearSelect.add(opt);
+        }
+
+        function generateSheet() {
+            const month = parseInt(monthSelect.value);
+            const year = parseInt(yearSelect.value);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const tbody = document.getElementById('table-body');
+            
+            document.getElementById('sheetTitle').innerText = `Attendance Sheet - ${monthNames[month]} ${year}`;
+            tbody.innerHTML = '';
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${i}-${monthNames[month]}</td>
+                    <td>
+                        <select class="status-select" onchange="handleStatusChange(this)">
+                            <option value="present">Present</option>
+                            <option value="holiday">Public Holiday</option>
+                            <option value="absent">Absent</option>
+                        </select>
+                    </td>
+                    <td><input type="time" class="in-time" value="09:00" onchange="calculateRow(this)"></td>
+                    <td><input type="time" class="out-time" value="17:30" onchange="calculateRow(this)"></td>
+                    <td class="row-total">8.50</td>
+                    <td class="row-ot">0.00</td>
+                `;
+                tbody.appendChild(row);
+            }
+            updateGrandTotals();
+        }
+
+        function handleStatusChange(select) {
+            const row = select.closest('tr');
+            const inInput = row.querySelector('.in-time');
+            const outInput = row.querySelector('.out-time');
+            const status = select.value;
+
+            // Reset classes
+            select.className = 'status-select';
+
+            if (status === 'holiday' || status === 'absent') {
+                inInput.value = '';
+                outInput.value = '';
+                inInput.disabled = true;
+                outInput.disabled = true;
+                inInput.classList.add('disabled-input');
+                outInput.classList.add('disabled-input');
+                select.classList.add(status === 'holiday' ? 'status-holiday' : 'status-absent');
+            } else {
+                inInput.value = '09:00';
+                outInput.value = '17:30';
+                inInput.disabled = false;
+                outInput.disabled = false;
+                inInput.classList.remove('disabled-input');
+                outInput.classList.remove('disabled-input');
+            }
+            calculateRow(inInput);
+        }
+
+        function calculateRow(input) {
+            const row = input.closest('tr');
+            const inT = row.querySelector('.in-time').value;
+            const outT = row.querySelector('.out-time').value;
+            const status = row.querySelector('.status-select').value;
+            
+            let diff = 0;
+            let ot = 0;
+
+            if (status === 'present' && inT && outT) {
+                const start = new Date(`2000-01-01T${inT}`);
+                let end = new Date(`2000-01-01T${outT}`);
+                
+                diff = (end - start) / (1000 * 60 * 60);
+                if (diff < 0) diff += 24; 
+                ot = diff > standardShift ? diff - standardShift : 0;
+            }
+
+            row.querySelector('.row-total').innerText = diff.toFixed(2);
+            row.querySelector('.row-ot').innerText = ot.toFixed(2);
+            
+            updateGrandTotals();
+        }
+
+        function updateGrandTotals() {
+            let total = 0, ot = 0;
+            document.querySelectorAll('.row-total').forEach(c => total += parseFloat(c.innerText) || 0);
+            document.querySelectorAll('.row-ot').forEach(c => ot += parseFloat(c.innerText) || 0);
+            
+            document.getElementById('grand-total').innerText = document.getElementById('footer-total').innerText = total.toFixed(2);
+            document.getElementById('grand-ot').innerText = document.getElementById('footer-ot').innerText = ot.toFixed(2);
+        }
+
+        window.onload = generateSheet;
+    </script>
+</body>
+</html>
