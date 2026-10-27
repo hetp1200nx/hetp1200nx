@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vacuum Applications — Het Patel</title>
+<meta name="description" content="Where industrial vacuum does the work: drying, distillation, packaging, freeze drying, transformer drying, solar, battery, furnaces, medical and more — with vacuum ranges, typical pumps, common problems and the spares that fix them.">
+<meta property="og:title" content="Vacuum Applications — Het Patel, Mechvac Technologies">
+<meta property="og:description" content="14 industrial vacuum applications explained: vacuum range, typical pumps, what goes wrong and what fixes it.">
+<meta property="og:image" content="https://het-patel.work.gd/application/img/mechvac-pumps.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+:root{
+  --bg:#fbfbfa; --surface:#ffffff; --surface-2:#f3f3f1; --line:#e7e7e3;
+  --text:#121212; --muted:#6b6b66; --faint:#9a9a94;
+  --accent:#0b8aa3; --accent-ink:#ffffff; --accent-soft:#e3f3f6;
+  --art:#f2f8f9;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+  --radius:14px;
+  --shadow:0 1px 0 rgba(0,0,0,.03),0 8px 24px -12px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0c0c; --surface:#141414; --surface-2:#1b1b1b; --line:#262626;
+    --text:#ededed; --muted:#a1a1a1; --faint:#6e6e6e;
+    --accent:#3cc3dc; --accent-ink:#06262d; --accent-soft:#0f2a30;
+    --art:#e9f1f3;
+    --shadow:0 1px 0 rgba(255,255,255,.03),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0c0c; --surface:#141414; --surface-2:#1b1b1b; --line:#262626;
+  --text:#ededed; --muted:#a1a1a1; --faint:#6e6e6e;
+  --accent:#3cc3dc; --accent-ink:#06262d; --accent-soft:#0f2a30;
+  --art:#e9f1f3;
+  --shadow:0 1px 0 rgba(255,255,255,.03),0 8px 24px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:15px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color 200ms ease}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.brand .back{color:var(--faint);font-weight:400}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{font-size:14px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:color 150ms ease,background-color 150ms ease}
+.nav-links a[aria-current]{color:var(--text)}
+@media (hover:hover) and (pointer:fine){.nav-links a:hover{color:var(--text);background:var(--surface-2)}}
+@media (max-width:560px){.nav-links a.hide-sm{display:none}}
+.theme-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--muted);display:grid;place-items:center;cursor:pointer;transition:transform 160ms var(--ease-out)}
+.theme-btn:active{transform:scale(0.95)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:10px;font:500 14px/1 Inter,system-ui,sans-serif;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;transition:transform 160ms var(--ease-out),background-color 150ms ease,border-color 150ms ease;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.btn:active{transform:scale(0.97)}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+@media (hover:hover) and (pointer:fine){.btn:hover{border-color:color-mix(in srgb,var(--text) 25%,var(--line))}.btn.primary:hover{background:color-mix(in srgb,var(--text) 86%,var(--bg))}}
+
+/* hero */
+.hero{padding:56px 0 24px}
+.crumb{font-size:13px;color:var(--faint)}
+.crumb a{color:var(--muted)}
+h1{font-size:clamp(32px,5.6vw,52px);line-height:1.05;letter-spacing:-.035em;font-weight:600;margin:14px 0}
+h1 .soft{color:var(--faint)}
+.lede{font-size:17px;color:var(--muted);max-width:60ch}
+.hero-art{margin-top:32px;border-radius:20px;background:#fff;border:1px solid var(--line);overflow:hidden;position:relative}
+.hero-art img{width:100%;height:auto;aspect-ratio:1818/1201;object-fit:cover;max-height:440px;object-position:center 40%}
+.hero-art figcaption{position:absolute;left:16px;bottom:14px;font-size:12px;color:#5f6b70;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+.enter{opacity:0;transform:translateY(8px);filter:blur(4px);animation:enter 600ms var(--ease-out) forwards}
+.enter:nth-child(2){animation-delay:60ms}.enter:nth-child(3){animation-delay:120ms}.enter:nth-child(4){animation-delay:180ms}.enter:nth-child(5){animation-delay:240ms}
+@keyframes enter{to{opacity:1;transform:none;filter:blur(0)}}
+
+/* scale legend */
+.scale{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:720px){.scale{grid-template-columns:1fr}}
+.scale div{padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.scale b{display:block;font-size:14px;font-weight:600}
+.scale span{font-size:13px;color:var(--muted)}
+.scale i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+
+/* sections */
+section{padding:56px 0}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.sec-head .num{font-size:12px;color:var(--faint)}
+h2{font-size:24px;letter-spacing:-.025em;font-weight:600}
+.sec-sub{color:var(--muted);max-width:64ch;margin-bottom:22px}
+h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
+
+/* filters */
+.filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px;margin:0 -2px 18px;position:sticky;top:56px;z-index:5;background:var(--bg);padding-block:10px}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;font:500 13px/1 Inter,system-ui,sans-serif;height:34px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;transition:background-color 150ms ease,color 150ms ease,border-color 150ms ease,transform 160ms var(--ease-out);-webkit-tap-highlight-color:transparent}
+.chip:active{transform:scale(0.96)}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip .n{opacity:.55;margin-left:4px;font-variant-numeric:tabular-nums}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+.app{all:unset;box-sizing:border-box;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform 160ms var(--ease-out),border-color 150ms ease,box-shadow 200ms ease;-webkit-tap-highlight-color:transparent}
+.app:active{transform:scale(0.98)}
+.app:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){
+  .app:hover{border-color:color-mix(in srgb,var(--text) 18%,var(--line));box-shadow:var(--shadow)}
+  .app:hover .art img{transform:scale(1.03)}
+}
+.art{background:var(--art);aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line)}
+.art img{width:100%;height:100%;object-fit:contain;transition:transform 300ms var(--ease-out)}
+.app-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ind-tag{font-size:12px;color:var(--accent);font-weight:500}
+.app p{font-size:14px;color:var(--muted)}
+.app .more{margin-top:auto;padding-top:8px;font-size:13px;color:var(--text);font-weight:500;display:flex;justify-content:space-between;align-items:center}
+.app .more span:last-child{color:var(--faint)}
+.app[hidden]{display:none}
+
+/* range bar */
+.range{position:relative;height:6px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line)}
+.range b{position:absolute;top:-1px;bottom:-1px;border-radius:99px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#24404f))}
+.range-lg{height:10px;margin-top:10px}
+.ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-top:6px;font-variant-numeric:tabular-nums}
+.range-val{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* approach */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
+@media (max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;counter-increment:s}
+.step::before{content:"0" counter(s);font:500 12px "JetBrains Mono",monospace;color:var(--accent);display:block;margin-bottom:10px}
+.step p{font-size:14px;color:var(--muted);margin-top:6px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+@media (max-width:820px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.svc{grid-template-columns:1fr}}
+.svc div{background:var(--surface);padding:20px}
+.svc .ic{width:30px;height:30px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:12px}
+.svc p{font-size:14px;color:var(--muted);margin-top:6px}
+
+/* cta */
+.cta{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:28px;border-radius:20px;background:var(--text);color:var(--bg)}
+.cta h2{color:var(--bg)}
+.cta p{color:color-mix(in srgb,var(--bg) 70%,var(--text));font-size:15px;margin-top:6px;max-width:52ch}
+.cta .btn{background:var(--bg);color:var(--text);border-color:var(--bg)}
+.cta .btn.ghost{background:transparent;color:var(--bg);border-color:color-mix(in srgb,var(--bg) 35%,var(--text))}
+
+footer{padding:36px 0 52px;color:var(--faint);font-size:13px;border-top:1px solid var(--line);margin-top:32px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity 500ms var(--ease-out),transform 500ms var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+
+/* dialog (modal: centered origin) */
+dialog{border:0;padding:0;background:transparent;max-width:min(860px,calc(100vw - 24px));width:100%;max-height:calc(100dvh - 24px);margin:auto;color:var(--text)}
+dialog::backdrop{background:rgba(10,12,14,.5);backdrop-filter:blur(3px);opacity:0;transition:opacity 200ms ease}
+dialog.show::backdrop{opacity:1}
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:auto;max-height:calc(100dvh - 24px);opacity:0;transform:scale(0.96) translateY(6px);transition:opacity 220ms var(--ease-out),transform 220ms var(--ease-out);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog.show .sheet{opacity:1;transform:none}
+dialog.closing .sheet{transition-duration:140ms}
+.sheet-top{display:grid;grid-template-columns:1fr 1fr}
+@media (max-width:720px){.sheet-top{grid-template-columns:1fr}}
+.sheet-art{background:var(--art);display:grid;place-items:center;min-height:220px}
+.sheet-art img{width:100%;height:100%;object-fit:contain}
+.sheet-head{padding:24px 24px 20px;display:flex;flex-direction:column;gap:10px}
+.sheet-head h2{font-size:26px}
+.sheet-head p{color:var(--muted)}
+.close{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer;z-index:2;transition:transform 160ms var(--ease-out)}
+.close:active{transform:scale(0.94)}
+.sheet-body{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line)}
+@media (max-width:720px){.sheet-body{grid-template-columns:1fr}}
+.sheet-body > div{background:var(--surface);padding:20px 22px}
+.sheet-body h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:500;margin-bottom:10px}
+.sheet-body ul{list-style:none;display:grid;gap:8px}
+.sheet-body li{font-size:14px;color:var(--muted);padding-left:16px;position:relative}
+.sheet-body li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--faint)}
+.sheet-body .fix li::before{content:"→";background:none;width:auto;height:auto;top:0;color:var(--accent);font-size:12px}
+.sheet-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 22px;border-top:1px solid var(--line)}
+.sheet-foot small{color:var(--muted);font-size:13px}
+.sheet-foot .btns{display:flex;gap:8px;flex-wrap:wrap}
+.nextprev{display:flex;gap:6px}
+.nextprev button{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;transition:transform 160ms var(--ease-out)}
+.nextprev button:active{transform:scale(0.94)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .enter{animation:fade 200ms ease forwards;transform:none;filter:none}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .reveal{transform:none;transition:opacity 200ms ease}
+  .sheet{transform:none}
+  .art img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="../home.html" class="brand"><span class="back">←</span>Het Patel</a>
+    <div class="nav-links">
+      <a href="../home.html#about" class="hide-sm">About</a>
+      <a href="./" aria-current="page">Applications</a>
+      <a href="../home.html#spares" class="hide-sm">Spares</a>
+      <a href="../home.html#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="wrap">
+    <div class="crumb enter"><a href="../home.html">Home</a> / Applications</div>
+    <h1 class="enter">Where vacuum does the work.<br><span class="soft">And what keeps it working.</span></h1>
+    <p class="lede enter">Every process asks something different of a vacuum pump: a deeper vacuum, more vapour, more hours, harsher gases. Here are the applications I see most on plant visits. For each one: the vacuum range, the pumps usually installed, what goes wrong, and the spares that fix it.</p>
+    <figure class="hero-art enter">
+      <img src="img/mechvac-pumps.jpg" alt="Mechvac vacuum pumps and skid-mounted vacuum systems: rotary vane pumps, a Roots booster and two process vacuum skids with condensers" width="1600" height="1057">
+      <figcaption>Mechvac pumps &amp; process vacuum systems</figcaption>
+    </figure>
+    <div class="scale enter">
+      <div><b><i style="background:color-mix(in srgb,var(--accent) 35%,transparent)"></i>Rough vacuum</b><span>1000 – 1 mbar · handling, packaging, forming, drying</span></div>
+      <div><b><i style="background:color-mix(in srgb,var(--accent) 70%,transparent)"></i>Medium vacuum</b><span>1 – 0.001 mbar · freeze drying, transformers, furnaces</span></div>
+      <div><b><i style="background:var(--accent)"></i>The bar on each card</b><span>shows where the process runs, from atmosphere (left) to deep vacuum (right)</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="apps" style="padding-top:32px">
+  <div class="wrap">
+    <div class="sec-head"><span class="num mono">01</span><h2>Applications</h2></div>
+    <p class="sec-sub">Filter by industry, then open any application for the details.</p>
+    <div class="filters" id="filters" role="toolbar" aria-label="Filter by industry"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="approach" style="padding-top:16px">
+  <div class="wrap">
+    <div class="sec-head"><span class="num mono">02</span><h2>How I look at an application</h2></div>
+    <p class="sec-sub">Horsepower and price come last. The process comes first.</p>
+    <div class="steps">
+      <div class="step reveal"><h3>Walk the process</h3><p>What's in the vessel, what leaves it as vapour, how hot, how long the cycle runs.</p></div>
+      <div class="step reveal"><h3>Measure the duty</h3><p>Working vacuum, pumping speed, gas and condensable load, corrosiveness, running hours.</p></div>
+      <div class="step reveal"><h3>Match the pump</h3><p>Oil-sealed, dry, booster-assisted: and the condenser, trap or filter that protects it.</p></div>
+      <div class="step reveal"><h3>Keep it running</h3><p>Right spares in stock, planned overhauls, and an AMC if the pump is critical.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="service" style="padding-top:16px">
+  <div class="wrap">
+    <div class="sec-head"><span class="num mono">03</span><h2>Support across the pump's life</h2></div>
+    <p class="sec-sub">Through Mechvac and VacSolutë, for any brand already installed in your plant.</p>
+    <div class="svc reveal">
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></span><h3>Spares &amp; kits</h3><p>Vanes, bearings, seals, filters, rotors and overhaul kits for rotary vane, dry screw and claw pumps, to the OEM part number.</p></div>
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span><h3>Repair &amp; overhaul</h3><p>Workshop or on-site. Tested before and after, with a failure report so the same fault doesn't return.</p></div>
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></span><h3>AMC / CMC</h3><p>Scheduled visits, a status report each time, and priority breakdown support for critical pumps.</p></div>
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Inspection &amp; audit</h3><p>A one-time check of installed pumps: vacuum, current, temperature, noise, with clear recommendations.</p></div>
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg></span><h3>Rotor coatings</h3><p>PEEK, PTFE, PFA, electroless nickel and Xylan for dry screw pumps in corrosive service.</p></div>
+      <div><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><h3>Replacement pumps</h3><p>When repair no longer pays: a direct Mechvac equivalent for the installed pump, sized to the real duty.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:16px">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div>
+        <h2>Don't see your process?</h2>
+        <p>Tell me what the pump is doing and what's going wrong. Send the nameplate photo too, and I'll suggest the right pump, spare or fix.</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" href="../inquiry/">Send enquiry</a>
+        <a class="btn ghost" href="tel:+919558008035">+91 95580 08035</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Het Patel · Mechvac Technologies Pvt. Ltd., Vadodara</span><span>Vacuum ranges are typical values; actual duty varies by process.</span></div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+  <div class="sheet" style="position:relative">
+    <button class="close" id="dClose" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="sheet-top">
+      <div class="sheet-art"><img id="dImg" alt=""></div>
+      <div class="sheet-head">
+        <span class="ind-tag" id="dInd"></span>
+        <h2 id="dTitle"></h2>
+        <p id="dDesc"></p>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px"><span style="font-size:13px;font-weight:500">Working vacuum</span><span class="range-val mono" id="dRange"></span></div>
+          <div class="range range-lg"><b id="dBar"></b></div>
+          <div class="ticks mono"><span>1000</span><span>100</span><span>10</span><span>1</span><span>0.1</span><span>0.01</span><span>0.001</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sheet-body">
+      <div><h4>Typical pumps</h4><ul id="dPumps"></ul></div>
+      <div><h4>What goes wrong</h4><ul id="dIssues"></ul></div>
+      <div class="fix"><h4>What I supply</h4><ul id="dFix"></ul></div>
+    </div>
+    <div class="sheet-foot">
+      <div class="nextprev"><button id="dPrev" aria-label="Previous application">←</button><button id="dNext" aria-label="Next application">→</button></div>
+      <div class="btns">
+        <a class="btn" id="dMail" href="../inquiry/">Ask about this</a>
+        <a class="btn primary" href="tel:+919558008035">Call</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const APPS = [
+  {id:'vacuum-drying', ind:'pharma', also:['chemical'], title:'Vacuum drying',
+   sum:'Filter dryers, RCVDs, tray and paddle dryers. Lower pressure lowers the boiling point, so solvent and moisture leave the product without overheating it.',
+   range:[100,1],
+   pumps:['Dry screw pump with inlet condenser','Oil-sealed rotary vane for low vapour loads','Roots booster to shorten drying time'],
+   issues:['Solvent condenses in the oil, so vacuum drops','Acid or chloride vapours attack wetted parts','Powder carry-over wears rotors and seals'],
+   fix:['Dry screw seal and bearing kits','PEEK / PTFE coated screw rotors','RV vanes, exhaust filters, oil','Condenser and trap sizing advice']},
+  {id:'distillation', ind:'chemical', also:['pharma'], title:'Distillation & solvent recovery',
+   sum:'Fractional, short-path and batch distillation. Running under vacuum separates heat-sensitive or high-boiling compounds at lower temperature and recovers solvent for reuse.',
+   range:[50,1],
+   pumps:['Dry screw pump','Roots booster + dry screw for deeper vacuum','Oil-sealed RV behind a good condenser'],
+   issues:['Heavy condensable load at start-up','Polymerising vapours leave deposits in the pump','Temperature drift changes product purity'],
+   fix:['Mechanical and lip seal kits','Rotor coating for corrosive solvents','Bearing kits and gear-side O-rings','Rebuild with failure report']},
+  {id:'vacuum-packaging', ind:'food', also:[], title:'Vacuum packaging',
+   sum:'Chamber machines, tray sealers and thermoform packers for meat, cheese, dairy and ready meals. Removing air slows spoilage and extends shelf life.',
+   range:[20,1],
+   pumps:['Oil-lubricated rotary vane','Central vacuum system for multiple lines'],
+   issues:['Moisture from product mixes with oil (milky oil)','Clogged exhaust filters cause oil mist and overload','Worn vanes slow the cycle time'],
+   fix:['Vane sets and overhaul kits','Exhaust and inlet filters','Food-grade vacuum pump oil','Gas ballast and oil-change guidance']},
+  {id:'freeze-drying', ind:'pharma', also:['food'], title:'Freeze drying (lyophilisation)',
+   sum:'Injectables, vaccines, probiotics and premium foods. The product is frozen, then ice sublimates directly to vapour under deep vacuum and collects on a cold condenser.',
+   range:[1,0.01],
+   pumps:['Two-stage oil-sealed rotary vane','Roots booster for larger chambers'],
+   issues:['High water vapour load early in the cycle','Leaks extend cycle time and risk batches','Oil degradation over long cycles'],
+   fix:['Two-stage RV overhaul kits','Booster bearing and seal kits','Shaft seals, gaskets, O-ring kits','Planned AMC between campaigns']},
+  {id:'thermoforming', ind:'plastics', also:['food'], title:'Thermoforming',
+   sum:'A heated plastic sheet is pulled onto a mould by vacuum to make trays, cups, blisters and liners. A buffer tank delivers fast suction at each stroke.',
+   range:[200,20],
+   pumps:['Oil-sealed rotary vane with vacuum tank','Dry claw pump'],
+   issues:['High cycle rate wears vanes quickly','Plastic dust and fumes reach the pump','Slow pump-down means poor mould definition'],
+   fix:['Vanes and bearing kits','Inlet filters and cartridges','Claw seal and shim kits','Tank and line leak check']},
+  {id:'extrusion', ind:'plastics', also:[], title:'Extrusion degassing',
+   sum:'Vacuum at the extruder vent removes moisture, monomers and volatiles from the melt, avoiding bubbles and weak spots in pipe, profile, film or compound.',
+   range:[100,10],
+   pumps:['Oil-sealed RV with separator','Dry claw pump','Dry screw for heavy volatiles'],
+   issues:['Volatiles condense and form sticky deposits','Polymer carry-over blocks the vent line','Oil contamination and frequent changes'],
+   fix:['Separator and filter elements','RV overhaul kits and oil','Claw and screw seal kits','Line layout and trap advice']},
+  {id:'transformer', ind:'electrical', also:[], title:'Transformer drying & oil filling',
+   sum:'Windings and insulation are dried under vacuum, then the tank is filled with oil under vacuum so no moisture or air bubbles reduce dielectric strength.',
+   range:[1,0.01],
+   pumps:['Roots booster + oil-sealed rotary vane','Mobile vacuum plant for site filling'],
+   issues:['Large moisture load from paper insulation','Long cycles wear the backing pump','Water in pump oil limits ultimate vacuum'],
+   fix:['Booster bearing and seal kits','RV vanes, shaft seals, oil','Overhaul kits for backing pumps','AMC for drying ovens']},
+  {id:'impregnation', ind:'electrical', also:[], title:'Vacuum impregnation (VPI)',
+   sum:'Motor and generator windings are placed in a tank, evacuated, then flooded with resin or varnish so it fills every gap, followed by pressure and curing.',
+   range:[10,0.1],
+   pumps:['Oil-sealed rotary vane','Roots booster for large tanks'],
+   issues:['Resin and styrene vapours foul the oil','Sticky residue on valves and filters','Slow pump-down holds up production'],
+   fix:['Inlet filters and traps','RV overhaul kits and oil','Booster seal kits','Oil analysis and change plan']},
+  {id:'solar', ind:'energy', also:['electrical'], title:'Solar module lamination',
+   sum:'Glass, EVA/POE, cells and backsheet are pressed and heated under vacuum in a laminator, so the encapsulant flows bubble-free around the cells.',
+   range:[5,0.5],
+   pumps:['Oil-sealed rotary vane','Roots booster on high-output lines'],
+   issues:['EVA releases acetic acid, which attacks the oil','Fast cycles, 24×7 operation','Frequent oil and filter changes'],
+   fix:['Vanes, shaft seals and gaskets','Exhaust filters and oil','Booster bearing kits','Planned overhaul schedules']},
+  {id:'battery', ind:'energy', also:['electrical'], title:'Battery cell production',
+   sum:'Lithium-ion cell drying, electrolyte filling and formation degassing all run under vacuum, where moisture control decides cell life.',
+   range:[10,0.01],
+   pumps:['Dry screw pump','Dry claw pump','Oil-sealed RV for drying ovens'],
+   issues:['Electrolyte vapours are corrosive (HF risk)','Moisture traces ruin cells','Contamination must not flow back to the process'],
+   fix:['Coated dry screw rotors','Dry pump seal and bearing kits','O-ring kits in suitable elastomers','Inspection and audit']},
+  {id:'furnace', ind:'metals', also:[], title:'Vacuum furnaces & heat treatment',
+   sum:'Hardening, brazing, sintering and annealing in vacuum keeps metal surfaces clean and oxide-free. The rotary vane and booster rough down and back the high-vacuum pump.',
+   range:[10,0.001],
+   pumps:['Roots booster + oil-sealed rotary vane','Backing pump for diffusion pump'],
+   issues:['Binder and dust from parts and fixtures','Slow pump-down cuts furnace throughput','Hot running and oil cracking'],
+   fix:['RV overhaul kits and high-temp oil','Booster bearing and seal kits','Inlet filters','Pump-down time check']},
+  {id:'medical', ind:'medical', also:[], title:'Hospital central vacuum',
+   sum:'Central suction plants feed wards, ICUs and operating theatres through a pipeline network, with duty and standby pumps and a receiver to buffer demand.',
+   range:[600,300],
+   pumps:['Oil-sealed or dry rotary vane, duplex or triplex','Receiver tank with bacterial filters'],
+   issues:['Zero tolerance for downtime','Fluid carry-over if traps are neglected','Pumps sized for old bed counts'],
+   fix:['Vanes, filters, oil','Overhaul kits for duty and standby units','AMC with 24×7 breakdown support','Plant capacity review']},
+  {id:'handling', ind:'general', also:['plastics'], title:'Holding, lifting & conveying',
+   sum:'CNC hold-down tables, pick-and-place, labelling, printing and pneumatic conveying. Vacuum grips a part or moves powder and granules without contact.',
+   range:[500,100],
+   pumps:['Dry rotary vane','Dry claw pump','Central vacuum for multiple machines'],
+   issues:['Wood, paper and powder dust','Leaks across large tables waste capacity','Carbon vanes wear in dusty duty'],
+   fix:['Carbon vanes for dry RV','Inlet filter cartridges','Claw sealing and bearing kits','Leak and capacity survey']},
+  {id:'composites', ind:'plastics', also:['energy'], title:'Composites & resin infusion',
+   sum:'Wind blades, boat hulls and FRP parts. A vacuum bag compacts the laminate and pulls resin through the fibre, giving strong parts with low void content.',
+   range:[50,5],
+   pumps:['Oil-sealed rotary vane with resin trap','Dry rotary vane'],
+   issues:['Resin reaches the pump if the trap is skipped','Styrene vapours degrade oil','Long holds at constant vacuum'],
+   fix:['RV vanes, oil and filters','Resin trap and line advice','Overhaul kits','On-site service during campaigns']},
+];
+
+const INDUSTRIES = {all:'All', pharma:'Pharma', chemical:'Chemical', food:'Food & dairy', plastics:'Plastics & composites', electrical:'Electrical', energy:'Solar & battery', metals:'Metals', medical:'Medical', general:'General industry'};
+
+const pos = (p) => ((3 - Math.log10(p)) / 6) * 100;  // 1000 mbar → 0%, 0.001 → 100%
+const fmt = (p) => p >= 1 ? String(p) : String(p).replace(/^0/, '0');
+const rangeText = (r) => `${fmt(r[0])} – ${fmt(r[1])} mbar`;
+const bar = (r) => `left:${pos(r[0])}%;width:${Math.max(pos(r[1]) - pos(r[0]), 3)}%`;
+const inds = (a) => [a.ind, ...a.also];
+
+/* language helpers (translations in APP_TR / IND_TR, defined below) */
+const LANG = () => (window.SITE ? window.SITE.lang : 'en');
+const T = (en) => (window.SITE ? window.SITE.t(en) : en);
+const tr = (a) => {
+  const t = (window.APP_TR && APP_TR[a.id] && APP_TR[a.id][LANG()]) || null;
+  return t ? { title: t[0], sum: t[1], pumps: t[2] || a.pumps, issues: t[3] || a.issues, fix: t[4] || a.fix } : a;
+};
+const indName = (k) => ((window.IND_TR && IND_TR[LANG()] && IND_TR[LANG()][k]) || INDUSTRIES[k]);
+const firstSentence = (txt) => { const m = txt.match(/^.*?[.।](\s|$)/); return m ? m[0].trim() : txt; };
+
+/* grid */
+const grid = document.getElementById('grid');
+let currentFilter = 'all', rendered = false;
+function renderGrid() {
+  grid.innerHTML = APPS.map((a, i) => { const t = tr(a); return `
+  <button class="app${rendered ? '' : ' reveal'}" data-i="${i}" data-ind="${inds(a).join(' ')}" aria-haspopup="dialog">
+    <div class="art"><img src="img/${a.id}.svg" alt="" loading="lazy" width="320" height="200"></div>
+    <div class="app-body">
+      <span class="ind-tag">${inds(a).map(indName).join(' · ')}</span>
+      <h3>${t.title}</h3>
+      <p>${firstSentence(t.sum)}</p>
+      <div style="margin-top:4px"><div class="range"><b style="${bar(a.range)}"></b></div></div>
+      <div class="more"><span class="range-val mono">${rangeText(a.range)}</span><span>${T('Details →')}</span></div>
+    </div>
+  </button>`; }).join('');
+  applyFilter();
+  rendered = true;
+}
+
+/* filters */
+const filters = document.getElementById('filters');
+const counts = Object.fromEntries(Object.keys(INDUSTRIES).map((k) => [k, k === 'all' ? APPS.length : APPS.filter((a) => inds(a).includes(k)).length]));
+function renderFilters() {
+  filters.innerHTML = Object.keys(INDUSTRIES).filter((k) => counts[k]).map((k) =>
+    `<button class="chip" data-k="${k}" aria-pressed="${k === currentFilter}">${indName(k)}<span class="n">${counts[k]}</span></button>`).join('');
+}
+function applyFilter() {
+  grid.querySelectorAll('.app').forEach((card) => {
+    card.hidden = !(currentFilter === 'all' || card.dataset.ind.split(' ').includes(currentFilter));
+  });
+}
+filters.addEventListener('click', (e) => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  currentFilter = b.dataset.k;
+  filters.querySelectorAll('.chip').forEach((c) => c.setAttribute('aria-pressed', c === b));
+  grid.querySelectorAll('.app').forEach((card) => { card.classList.remove('reveal'); card.style.transitionDelay = ''; });
+  applyFilter();
+});
+
+/* dialog */
+const dlg = document.getElementById('dlg');
+const $ = (id) => document.getElementById(id);
+let cur = 0;
+const visible = () => [...grid.querySelectorAll('.app:not([hidden])')].map((c) => +c.dataset.i);
+function fill(i) {
+  const a = APPS[i], t = tr(a); cur = i;
+  $('dImg').src = `img/${a.id}.svg`; $('dImg').alt = t.title;
+  $('dInd').textContent = inds(a).map(indName).join(' · ');
+  $('dTitle').textContent = t.title;
+  $('dDesc').textContent = t.sum;
+  $('dRange').textContent = rangeText(a.range);
+  $('dBar').style.cssText = bar(a.range);
+  const li = (arr) => arr.map((x) => `<li>${x}</li>`).join('');
+  $('dPumps').innerHTML = li(t.pumps); $('dIssues').innerHTML = li(t.issues); $('dFix').innerHTML = li(t.fix);
+  $('dMail').href = `../inquiry/?app=${encodeURIComponent(a.title)}`;
+  history.replaceState(null, '', '#' + a.id);
+}
+renderFilters();
+renderGrid();
+addEventListener('langchange', () => { renderFilters(); renderGrid(); if (dlg.open) fill(cur); });
+function openApp(i) {
+  fill(i);
+  if (!dlg.open) {
+    dlg.classList.remove('closing');
+    dlg.showModal();
+    requestAnimationFrame(() => dlg.classList.add('show'));
+  }
+}
+function closeApp() {
+  if (!dlg.open) return;
+  dlg.classList.add('closing'); dlg.classList.remove('show');
+  setTimeout(() => { dlg.close(); dlg.classList.remove('closing'); }, 150);
+  history.replaceState(null, '', location.pathname + location.search);
+}
+grid.addEventListener('click', (e) => { const c = e.target.closest('.app'); if (c) openApp(+c.dataset.i); });
+$('dClose').addEventListener('click', closeApp);
+dlg.addEventListener('cancel', (e) => { e.preventDefault(); closeApp(); });
+dlg.addEventListener('click', (e) => { if (e.target === dlg) closeApp(); });
+const step = (d) => { const v = visible(); const n = v.indexOf(cur); fill(v[(n + d + v.length) % v.length]); };
+$('dPrev').addEventListener('click', () => step(-1));
+$('dNext').addEventListener('click', () => step(1));
+dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+
+/* deep link: /application/#vacuum-drying */
+const fromHash = () => { const i = APPS.findIndex((a) => '#' + a.id === location.hash); if (i > -1) openApp(i); };
+fromHash();
+
+/* chrome */
+document.getElementById('yr').textContent = new Date().getFullYear();
+const root = document.documentElement;
+try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+});
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', scrollY > 8);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { const t = e.target; t.classList.add('in'); io.unobserve(t); setTimeout(() => { t.classList.remove('reveal', 'in'); t.style.transitionDelay = ''; }, 800); } }), { rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach((el) => {
+  const sib = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+  el.style.transitionDelay = (sib.indexOf(el) % 3) * 50 + 'ms';
+  io.observe(el);
+});
+</script>
+<script src="../assets/i18n.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

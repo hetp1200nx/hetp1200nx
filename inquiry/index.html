@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spares Enquiry — Het Patel</title>
+<meta name="description" content="Send a vacuum pump spares enquiry: pump brand, model, part needed and a nameplate photo. Rotary vane, dry screw and claw pumps of any brand.">
+<meta property="og:title" content="Vacuum Pump Spares Enquiry — Het Patel, Mechvac Technologies">
+<meta property="og:description" content="Send your pump details and nameplate photo. Spares for any brand of rotary vane, dry screw and claw vacuum pumps.">
+<meta property="og:image" content="https://het-patel.work.gd/application/img/mechvac-pumps.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+:root{
+  --bg:#fbfbfa; --surface:#ffffff; --surface-2:#f3f3f1; --line:#e7e7e3;
+  --text:#121212; --muted:#6b6b66; --faint:#9a9a94;
+  --accent:#0b8aa3; --accent-ink:#ffffff; --accent-soft:#e3f3f6;
+  --danger:#c2410c;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --radius:14px;
+  --shadow:0 1px 0 rgba(0,0,0,.03),0 8px 24px -12px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0c0c; --surface:#141414; --surface-2:#1b1b1b; --line:#262626;
+    --text:#ededed; --muted:#a1a1a1; --faint:#6e6e6e;
+    --accent:#3cc3dc; --accent-ink:#06262d; --accent-soft:#0f2a30; --danger:#fb923c;
+    --shadow:0 1px 0 rgba(255,255,255,.03),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0c0c; --surface:#141414; --surface-2:#1b1b1b; --line:#262626;
+  --text:#ededed; --muted:#a1a1a1; --faint:#6e6e6e;
+  --accent:#3cc3dc; --accent-ink:#06262d; --accent-soft:#0f2a30; --danger:#fb923c;
+  --shadow:0 1px 0 rgba(255,255,255,.03),0 8px 24px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:15px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:600;display:flex;gap:8px}.brand .back{color:var(--faint);font-weight:400}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{font-size:14px;color:var(--muted);padding:6px 10px;border-radius:8px;transition:color 150ms ease,background-color 150ms ease}
+@media (hover:hover) and (pointer:fine){.nav-links a:hover{color:var(--text);background:var(--surface-2)}}
+@media (max-width:560px){.nav-links a.hide-sm{display:none}}
+.theme-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--muted);display:grid;place-items:center;cursor:pointer;transition:transform 160ms var(--ease-out)}
+.theme-btn:active{transform:scale(0.95)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 18px;border-radius:11px;font-family:inherit;font-size:14px;font-weight:500;line-height:1;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;transition:transform 160ms var(--ease-out),background-color 150ms ease,border-color 150ms ease,opacity 150ms ease;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(0.97)}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn.wa{background:#25d366;border-color:#25d366;color:#fff}
+.btn[disabled]{opacity:.6;cursor:progress}
+@media (hover:hover) and (pointer:fine){.btn:hover{border-color:color-mix(in srgb,var(--text) 25%,var(--line))}}
+
+.hero{padding:48px 0 20px}
+.crumb{font-size:13px;color:var(--faint)}.crumb a{color:var(--muted)}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.08;letter-spacing:-.03em;font-weight:600;margin:12px 0 10px}
+.lede{color:var(--muted);font-size:16px;max-width:60ch}
+.enter{opacity:0;transform:translateY(8px);animation:enter 500ms var(--ease-out) forwards}
+.enter:nth-child(2){animation-delay:50ms}.enter:nth-child(3){animation-delay:100ms}
+@keyframes enter{to{opacity:1;transform:none}}
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;padding:20px 0 64px}
+@media (max-width:860px){.layout{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+fieldset{border:0;display:grid;gap:14px}
+fieldset + fieldset{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+legend{font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+legend .n{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+label .req{color:var(--danger)}
+input,select,textarea{font:inherit;font-size:15px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%;transition:border-color 150ms ease,box-shadow 150ms ease}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.invalid input,.invalid select,.invalid textarea{border-color:var(--danger)}
+.err{font-size:12px;color:var(--danger);display:none}
+.invalid .err{display:block}
+
+/* segmented pump type */
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:520px){.seg{grid-template-columns:1fr 1fr}}
+.seg label{position:relative;display:block;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:flex;align-items:center;justify-content:center;text-align:center;height:44px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:14px;font-weight:500;transition:background-color 150ms ease,border-color 150ms ease,color 150ms ease,transform 160ms var(--ease-out)}
+.seg label:active span{transform:scale(0.97)}
+.seg input:checked + span{background:var(--text);color:var(--bg);border-color:var(--text)}
+.seg input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+
+/* photo drop */
+.drop{position:relative;display:grid;place-items:center;gap:6px;text-align:center;min-height:132px;padding:18px;border:1.5px dashed var(--line);border-radius:12px;background:var(--bg);cursor:pointer;transition:border-color 150ms ease,background-color 150ms ease}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop .hint{font-size:13px;color:var(--muted)}
+.drop b{color:var(--text);font-weight:500}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.thumb{position:relative;width:76px;height:76px;border-radius:10px;overflow:hidden;border:1px solid var(--line);opacity:0;transform:scale(0.95);animation:pop 200ms var(--ease-out) forwards}
+@keyframes pop{to{opacity:1;transform:none}}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb small{position:absolute;left:0;right:0;bottom:0;font-size:10px;background:rgba(0,0,0,.55);color:#fff;padding:2px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:22px;border-top:1px solid var(--line);align-items:center}
+.actions .note{font-size:12px;color:var(--faint);flex-basis:100%}
+.hp{position:absolute;left:-9999px}
+
+aside{display:grid;gap:14px;position:sticky;top:76px}
+@media (max-width:860px){aside{position:static}}
+aside h3{font-size:15px;font-weight:600}
+.steps{list-style:none;counter-reset:s;display:grid;gap:12px;margin-top:12px}
+.steps li{counter-increment:s;display:flex;gap:10px;font-size:14px;color:var(--muted)}
+.steps li::before{content:counter(s);flex:none;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:12px;color:var(--text);background:var(--surface-2)}
+.direct a{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.direct a:last-child{border-bottom:0}
+.direct small{color:var(--muted);font-size:12px;display:block}
+.dl{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.dl:last-child{border-bottom:0}
+.dl img{width:44px;height:56px;object-fit:cover;border-radius:6px;border:1px solid var(--line);flex:none}
+.dl b{font-size:14px;font-weight:500;display:block}
+.dl small{font-size:12px;color:var(--muted)}
+footer{padding:28px 0 40px;color:var(--faint);font-size:13px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){.enter,.thumb{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body data-page="inquiry">
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../home.html" class="brand"><span class="back">←</span>Het Patel</a>
+    <div class="nav-links">
+      <a href="../application/" class="hide-sm">Applications</a>
+      <a href="../home.html#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme" title="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="hero">
+    <div class="crumb enter"><a href="../home.html">Home</a> / <span>Enquiry</span></div>
+    <h1 class="enter">Spares enquiry</h1>
+    <p class="lede enter">Tell me about the pump and the part you need. Rotary vane, dry screw or claw, any brand. A nameplate photo is the fastest way to get the right kit.</p>
+  </header>
+
+  <div class="layout">
+    <form class="card" id="form" action="https://formsubmit.co/Het.patel@mechvactech.com" method="POST" enctype="multipart/form-data" novalidate>
+      <input type="hidden" name="_subject" id="subj" value="New spares enquiry from het-patel.work.gd">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://het-patel.work.gd/inquiry/thanks.html">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="Language" id="langField" value="en">
+
+      <fieldset>
+        <legend><span class="n">1</span><span>Your details</span></legend>
+        <div class="row">
+          <label data-f="name"><span>Name <span class="req">*</span></span><input name="Name" autocomplete="name" required><span class="err">Please enter your name.</span></label>
+          <label data-f="company"><span>Company / plant <span class="req">*</span></span><input name="Company" autocomplete="organization" required><span class="err">Please enter your company.</span></label>
+        </div>
+        <div class="row">
+          <label data-f="phone"><span>Mobile / WhatsApp <span class="req">*</span></span><input name="Phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91" required pattern="[+0-9 ()-]{8,}"><span class="err">Please enter a valid phone number.</span></label>
+          <label data-f="email"><span>Email</span><input name="email" type="email" autocomplete="email"><span class="err">Please check the email address.</span></label>
+        </div>
+        <label><span>City</span><input name="City" autocomplete="address-level2"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">2</span><span>Pump details</span></legend>
+        <div class="seg" role="radiogroup" aria-label="Pump type">
+          <label><input type="radio" name="Pump type" value="Rotary vane (oil)" checked><span>Rotary vane (oil)</span></label>
+          <label><input type="radio" name="Pump type" value="Rotary vane (dry)"><span>Rotary vane (dry)</span></label>
+          <label><input type="radio" name="Pump type" value="Dry screw"><span>Dry screw</span></label>
+          <label><input type="radio" name="Pump type" value="Claw"><span>Claw</span></label>
+          <label><input type="radio" name="Pump type" value="Dry piston"><span>Dry piston</span></label>
+          <label><input type="radio" name="Pump type" value="Roots booster"><span>Roots booster</span></label>
+          <label><input type="radio" name="Pump type" value="Not sure"><span>Not sure</span></label>
+        </div>
+        <div class="row">
+          <label data-f="brand"><span>Pump brand <span class="req">*</span></span><input name="Brand" list="brands" required placeholder="e.g. Busch, Leybold"><span class="err">Please enter the pump brand.</span></label>
+          <label><span>Model</span><input name="Model" placeholder="e.g. RA 0100 F"></label>
+        </div>
+        <div class="row">
+          <label><span>Serial number</span><input name="Serial no"></label>
+          <label><span>Application</span><input name="Application" placeholder="e.g. vacuum drying, packaging"></label>
+        </div>
+        <datalist id="brands"></datalist>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n">3</span><span>What you need</span></legend>
+        <label data-f="need"><span>Part / kit needed <span class="req">*</span></span><textarea name="Requirement" required placeholder="e.g. complete overhauling kit, vanes, exhaust filters, part no. from manual"></textarea><span class="err">Please describe the part or kit you need.</span></label>
+        <div class="row">
+          <label><span>Quantity</span><input name="Quantity" inputmode="numeric" placeholder="1"></label>
+          <label><span>How urgent?</span>
+            <select name="Urgency">
+              <option value="Breakdown - pump stopped">Breakdown — pump stopped</option>
+              <option value="Within a week">Within a week</option>
+              <option value="Planned maintenance" selected>Planned maintenance</option>
+              <option value="Just a quotation">Just a quotation</option>
+            </select>
+          </label>
+        </div>
+        <div data-f="photo">
+          <label class="drop" id="drop">
+            <input type="file" name="attachment" id="photo" accept="image/*,application/pdf">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>
+            <span class="hint"><b>Add nameplate photo</b><br>Tap to take a photo or choose a file (max 5 MB)</span>
+          </label>
+          <div class="thumbs" id="thumbs"></div>
+          <span class="err" id="photoErr">This file is larger than 5 MB. Please choose a smaller photo.</span>
+        </div>
+        <label><span>Anything else?</span><textarea name="Message" placeholder="Problem you see: vacuum drop, oil loss, noise, overheating…" style="min-height:72px"></textarea></label>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn primary" type="submit" id="send"><span>Send enquiry</span></button>
+        <a class="btn wa" id="waSend" href="#" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Z"/></svg><span>Send on WhatsApp</span></a>
+        <span class="note">The form goes to my office email. WhatsApp sends the same details as a message; attach the photo in the chat.</span>
+      </div>
+    </form>
+
+    <aside>
+      <div class="card">
+        <h3>What happens next</h3>
+        <ol class="steps">
+          <li><span>I match your pump and part to the OEM part and position number.</span></li>
+          <li><span>You get the right kit with price and delivery.</span></li>
+          <li><span>If needed, an engineer visit or workshop repair is arranged.</span></li>
+        </ol>
+      </div>
+      <div class="card direct">
+        <h3 style="margin-bottom:4px">Prefer to talk?</h3>
+        <a href="tel:+919558008035"><span><small>Office phone</small>+91 95580 08035</span><span>→</span></a>
+        <a href="mailto:Het.patel@mechvactech.com"><span><small>Office email</small>Het.patel@mechvactech.com</span><span>→</span></a>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:4px">Brochures</h3>
+        <a class="dl" href="../downloads/VacSolute-Spares-and-Service-Brochure.pdf" download><img src="../downloads/vacsolute-cover.jpg" alt="" loading="lazy"><span><b>Spares &amp; service brochure</b><small>PDF · 6.7 MB</small></span></a>
+        <a class="dl" href="../downloads/Mechvac-Technologies-Company-Profile.pdf" download><img src="../downloads/mechvac-cover.jpg" alt="" loading="lazy"><span><b>Mechvac company profile</b><small>PDF · 1.5 MB</small></span></a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Het Patel · Mechvac Technologies Pvt. Ltd.</span><span>Brand names belong to their owners; parts are equivalent replacements.</span></div>
+</footer>
+
+<script src="../assets/i18n.js"></script>
+<script src="../assets/site.js"></script>
+<script>
+(() => {
+  const form = document.getElementById('form');
+  const $ = (s) => form.querySelector(s);
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* theme */
+  const root = document.documentElement;
+  try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  });
+
+  /* brand suggestions */
+  document.getElementById('brands').innerHTML = ['Busch','Leybold','Edwards','Toshniwal','Atlas Copco','Becker','Rietschle','Pfeiffer','Economy','Tekmen','HHV','Everest','Gardner Denver','Tuthill','Kinney','DVP','Stokes','Anest Iwata','Ulvac','Varian','Welch','Hanbell','Alcatel','Mechvac'].map((b) => `<option value="${b}">`).join('');
+
+  /* prefill from ?brand=&model=&app= */
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('brand')) $('[name="Brand"]').value = qs.get('brand');
+  if (qs.get('model')) $('[name="Model"]').value = qs.get('model');
+  if (qs.get('app')) $('[name="Application"]').value = qs.get('app');
+  if (qs.get('type')) { const r = [...form.querySelectorAll('[name="Pump type"]')].find((x) => x.value === qs.get('type')); if (r) r.checked = true; }
+
+  /* photo */
+  const MAX = 5 * 1024 * 1024;
+  const photo = document.getElementById('photo');
+  const drop = document.getElementById('drop');
+  const thumbs = document.getElementById('thumbs');
+  const photoBox = form.querySelector('[data-f="photo"]');
+  const showFile = () => {
+    thumbs.innerHTML = '';
+    photoBox.classList.remove('invalid');
+    const f = photo.files[0]; if (!f) return;
+    if (f.size > MAX) { photoBox.classList.add('invalid'); photo.value = ''; return; }
+    const d = document.createElement('div'); d.className = 'thumb';
+    if (f.type.startsWith('image/')) { const i = new Image(); i.src = URL.createObjectURL(f); i.alt = ''; d.appendChild(i); }
+    else d.innerHTML = '<div style="display:grid;place-items:center;height:100%;font-size:12px;color:var(--muted)">PDF</div>';
+    const s = document.createElement('small'); s.textContent = f.name; d.appendChild(s);
+    thumbs.appendChild(d);
+  };
+  photo.addEventListener('change', showFile);
+  ['dragenter', 'dragover'].forEach((e) => drop.addEventListener(e, () => drop.classList.add('over')));
+  ['dragleave', 'drop'].forEach((e) => drop.addEventListener(e, () => drop.classList.remove('over')));
+
+  /* validation */
+  const fields = [...form.querySelectorAll('[data-f]')].filter((l) => l.dataset.f !== 'photo');
+  const check = (box) => {
+    const el = box.querySelector('input,textarea,select');
+    const ok = el.checkValidity() && (!el.required || el.value.trim() !== '');
+    box.classList.toggle('invalid', !ok);
+    return ok;
+  };
+  fields.forEach((box) => box.querySelector('input,textarea').addEventListener('blur', () => { if (box.classList.contains('invalid') || box.querySelector('input,textarea').value) check(box); }));
+  fields.forEach((box) => box.querySelector('input,textarea').addEventListener('input', () => { if (box.classList.contains('invalid')) check(box); }));
+
+  const get = (n) => (form.elements[n] && form.elements[n].value || '').trim();
+  const summary = () => {
+    const L = (en) => window.SITE.t(en);
+    return [
+      `${L('Spares enquiry')}`,
+      `${L('Name')}: ${get('Name')}`,
+      `${L('Company / plant')}: ${get('Company')}`,
+      get('City') && `${L('City')}: ${get('City')}`,
+      `${L('Pump type')}: ${form.querySelector('[name="Pump type"]:checked').value}`,
+      `${L('Pump brand')}: ${get('Brand')}`,
+      get('Model') && `${L('Model')}: ${get('Model')}`,
+      get('Serial no') && `${L('Serial number')}: ${get('Serial no')}`,
+      get('Application') && `${L('Application')}: ${get('Application')}`,
+      `${L('Part / kit needed')}: ${get('Requirement')}`,
+      get('Quantity') && `${L('Quantity')}: ${get('Quantity')}`,
+      `${L('How urgent?')} ${get('Urgency')}`,
+      get('Message') && `${L('Anything else?')} ${get('Message')}`,
+    ].filter(Boolean).join('\n');
+  };
+
+  form.addEventListener('submit', (e) => {
+    const bad = fields.filter((b) => !check(b));
+    if (bad.length) {
+      e.preventDefault();
+      bad[0].querySelector('input,textarea').focus();
+      return;
+    }
+    document.getElementById('subj').value = `Spares enquiry: ${get('Brand')} ${get('Model')} — ${get('Company')}`.trim();
+    document.getElementById('langField').value = window.SITE.lang;
+    const b = document.getElementById('send');
+    b.disabled = true; b.querySelector('span').textContent = window.SITE.t('Sending…');
+  });
+
+  document.getElementById('waSend').addEventListener('click', (e) => {
+    e.currentTarget.href = window.SITE.waLink(summary());
+  });
+
+  /* back/forward cache: re-enable button */
+  addEventListener('pageshow', () => { const b = document.getElementById('send'); b.disabled = false; b.querySelector('span').textContent = window.SITE.t('Send enquiry'); });
+})();
+</script>
+</body>
+</html>
