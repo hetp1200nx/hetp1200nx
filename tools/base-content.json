@@ -1,0 +1,211 @@
+{
+  "seo": {
+    "title": "",
+    "description": "Sales & Application Engineer in industrial vacuum at Mechvac Technologies, Vadodara."
+  },
+  "profile": {
+    "name": "Het Patel",
+    "firstName": "Het",
+    "role": "Sales & Application Engineer",
+    "company": "Mechvac Technologies Pvt. Ltd.",
+    "companyShort": "Mechvac Technologies",
+    "location": "Vadodara, Gujarat",
+    "photo": "Img.jpeg",
+    "linkedin": ""
+  },
+  "contact": {
+    "officePhone": "+91 95580 08035",
+    "officeEmail": "Het.patel@mechvactech.com",
+    "whatsapp": "+91 95580 08035",
+    "enquiryEmail": "Het.patel@mechvactech.com",
+    "website": "https://www.mechvactech.com",
+    "address": "A-204, Mayfair Corporate Park, Kalali-Talsat Road, Vadodara, Gujarat 390012",
+    "locationLabel": "Vadodara, Gujarat, India"
+  },
+  "hero": {
+    "eyebrow": "Sales & Application Engineer · Mechvac Technologies",
+    "headline": "Hi, I'm Het.",
+    "headlineSoft": "I help plants keep their vacuum running.",
+    "lede": "I work in industrial vacuum — visiting plants, understanding the process, and matching the right pump, spare or service to it. Based in <strong>Vadodara, Gujarat</strong>."
+  },
+  "about": {
+    "show": true,
+    "title": "About me",
+    "paragraphs": [
+      "I'm a <b>mechanical engineer turned technical salesperson</b>. Most of my week is spent on plant floors with maintenance and production teams, working out why a vacuum line isn't pulling down, why a pump keeps losing oil, or which pump suits a new process.",
+      "I like to start with the process, not the catalogue: vacuum level, capacity, what gas and vapour the pump is handling, temperature, corrosiveness and running hours. Getting that right first is what makes the recommendation stick.",
+      "Outside the plant, I'm the person customers call for a quick answer on a part number, an overhaul plan or a replacement for an old pump."
+    ],
+    "facts": [
+      { "label": "Role", "value": "Sales & Application Engineer" },
+      { "label": "Company", "value": "Mechvac Technologies Pvt. Ltd." },
+      { "label": "Field", "value": "Industrial vacuum pumps" },
+      { "label": "Background", "value": "Mechanical Engineering" },
+      { "label": "Based in", "value": "Vadodara, Gujarat" }
+    ]
+  },
+  "experience": {
+    "show": true,
+    "title": "Experience",
+    "items": [
+      {
+        "role": "Sales & Application Engineer",
+        "company": "Mechvac Technologies Pvt. Ltd. · Vadodara",
+        "when": "Present",
+        "points": [
+          "<strong>Plant visits &amp; surveys</strong> — finding and studying vacuum applications across process plants.",
+          "<strong>Pump selection</strong> — recommending new pumps or direct equivalents for installed ones.",
+          "<strong>Spares, service &amp; AMC</strong> — multi-brand spares, repair coordination and annual maintenance contracts.",
+          "<strong>Offers &amp; follow-up</strong> — technical and commercial quotations through to order.",
+          "<strong>New business</strong> — opening new plants, industries and EPC accounts."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "show": true,
+    "title": "What I bring",
+    "items": [
+      { "title": "Technical sales", "text": "Selling on the process problem, not just the price." },
+      { "title": "Application engineering", "text": "Sizing by vacuum level, capacity, gas load and condensables." },
+      { "title": "Vacuum technology", "text": "Rotary vane, dry screw, claw, piston and Roots booster pumps." },
+      { "title": "Business development", "text": "Prospecting plants, industries and EPC companies." },
+      { "title": "Customer relationships", "text": "Face-to-face with maintenance heads; quick, practical follow-up." },
+      { "title": "Reporting & CRM", "text": "Visit reports, DSR and pipeline tracking that stay current." }
+    ],
+    "industries": ["Pharmaceuticals", "Chemicals", "Petrochemicals", "Food & dairy", "Packaging", "Plastics & rubber", "Automotive", "Transformers", "Solar", "Battery", "Medical devices", "EPC projects"],
+    "applicationsCta": "Explore 14 vacuum applications →"
+  },
+  "group": {
+    "show": true,
+    "title": "The group I represent",
+    "intro": "Four companies under the VacSolutë group, covering vacuum pumps, complete systems, OEM-equivalent spares and dry screw coatings. One contact for all of it.",
+    "companies": [
+      {
+        "name": "Mechvac Technologies Pvt. Ltd.", "short": "Vacuum pumps & systems", "tag": "Pumps & systems", "tone": "warm",
+        "images": [ { "src": "assets/group/vacuum-system.webp", "alt": "Mechvac skid-mounted vacuum system", "size": 100 }, { "src": "assets/group/rv-pump.webp", "alt": "Mechvac MT series oil-sealed rotary vane pump", "size": 55 } ],
+        "lead": "",
+        "blocks": [
+          { "heading": "Vacuum pumps", "style": "list", "items": ["Oil-sealed rotary vane", "Dry rotary vane", "Double-stage rotary vane", "Oil-free claw", "Dry reciprocating piston"] },
+          { "heading": "Vacuum systems", "style": "list", "items": ["Centralised vacuum", "Pneumatic conveying", "Medical vacuum", "Drying process", "Closed loop", "Customised for any industry"] }
+        ],
+        "notes": []
+      },
+      {
+        "name": "Mechvac Technologies", "short": "OEM spares & oils", "tag": "OEM spares", "tone": "cool",
+        "images": [ { "src": "assets/group/mechvac-kits.webp", "alt": "Mechvac overhauling kit boxes", "size": 100 }, { "src": "assets/group/mechvac-oil.webp", "alt": "Mechvac vacuum pump oil", "size": 60 } ],
+        "lead": "<b>20,000+</b> OEM-equivalent spares, oils and lubricants in ready stock.",
+        "blocks": [
+          { "heading": "For brands such as", "style": "chips", "items": ["Busch", "Leybold", "Atlas Copco", "Edwards", "HHV", "Tuthill", "DVP", "Gardner Denver", "Pfeiffer", "+ more"] }
+        ],
+        "notes": ["Service network from North to South and East to West India, for fast response and dependable support."]
+      },
+      {
+        "name": "Alesol Vacuum India Pvt. Ltd.", "short": "Dry screw pumps & systems", "tag": "Dry screw", "tone": "warm",
+        "images": [ { "src": "assets/group/dry-screw-pump.webp", "alt": "Alesol industrial dry screw vacuum pump", "size": 70, "wide": true } ],
+        "lead": "",
+        "blocks": [
+          { "heading": "Vacuum pumps", "style": "one", "items": ["Industrial dry screw vacuum pumps"] },
+          { "heading": "Vacuum systems", "style": "list", "items": ["Centralised vacuum", "Pneumatic conveying", "Distillation process", "Helium leak detector systems", "Customised for any industry"] }
+        ],
+        "notes": []
+      },
+      {
+        "name": "Alesol Equipment", "short": "Dry screw spares & coatings", "tag": "Spares & coating", "tone": "cool",
+        "images": [ { "src": "assets/group/alesol-kits.webp", "alt": "Alesol overhauling kit boxes", "size": 100 } ],
+        "lead": "",
+        "blocks": [
+          { "heading": "In-house coating for dry screw pumps", "style": "chips", "items": ["PEEK", "Nickel", "Electroless nickel", "Xylan"] }
+        ],
+        "notes": ["Ready stock of OEM-equivalent spares, oils and lubricants for Busch, Leybold, Atlas Copco, Edwards, HHV, Tuthill, DVP, Gardner Denver, Everest and Pfeiffer.", "Pan-India service network for quick response and dependable support."]
+      }
+    ]
+  },
+  "products": {
+    "show": true,
+    "title": "Products",
+    "intro": "Pumps, systems and spares I supply, all made in India by the VacSolutë group. Swipe through, and tap any card for the full overview.",
+    "items": []
+  },
+  "spares": {
+    "show": true,
+    "title": "What I can help you with now",
+    "intro": "Through Mechvac, I supply spares for <b style=\"color:var(--text);font-weight:500\">rotary vane, dry screw and claw vacuum pumps of any brand</b> — built to the OEM part and position number.",
+    "proof": ["30–45% below OEM price", "20,000+ parts in stock", "24-hr dispatch on stock items", "6-month warranty"],
+    "tabs": [
+      { "label": "Rotary vane", "title": "Rotary vane pumps — oil-lubricated & dry",
+        "parts": ["Overhauling kits", "Vanes", "Bearing kits", "Gasket & seal kits", "Exhaust & inlet filters", "Shaft seals", "Rotors", "Vacuum pump oils"],
+        "why": ["<b>Exact fit</b> to the OEM part and position number.", "<b>Complete kits</b> — every part for one overhaul, shipped together.", "<b>Repair &amp; AMC</b> available if you'd rather we do the overhaul."] },
+      { "label": "Dry screw", "title": "Dry screw pumps",
+        "parts": ["Overhauling kits", "Bearing kits", "O-ring & gasket kits", "Lip seals", "Mechanical seals", "Shaft sleeves", "Screw rotors"],
+        "why": ["<b>Seals chosen for your process</b> — solvents, acid vapour, temperature.", "<b>Rotor coatings</b>: PEEK, PTFE, PFA, electroless nickel, Xylan.", "<b>Full rebuild</b> with a failure report, so it doesn't repeat."] },
+      { "label": "Claw", "title": "Claw pumps",
+        "parts": ["Sealing kits", "Seal kits", "Bearing kits", "Shim kits", "Dowel pins", "Claws", "Gears", "Shafts"],
+        "why": ["<b>Shims included</b> to set rotor clearances correctly.", "<b>Oil-free stays oil-free</b> — gear-side seals matched to original.", "<b>On-site or workshop</b> overhaul, your choice."] }
+    ],
+    "brands": ["Busch", "Leybold", "Edwards", "Toshniwal", "Atlas Copco", "Becker", "Rietschle", "Pfeiffer", "Economy", "Tekmen", "HHV", "Everest", "Gardner Denver", "Tuthill", "Kinney", "DVP", "Stokes", "Anest Iwata", "Ulvac", "Varian", "Welch", "Hanbell", "Alcatel"],
+    "cta": "<b>Need a part?</b> Send me a photo of the pump nameplate and the part you need — I'll come back with the right kit and a price."
+  },
+  "brochures": {
+    "show": true,
+    "title": "Brochures",
+    "items": [
+      { "title": "Spares & service brochure", "text": "Replacement kits, repair, AMC and coatings for vacuum pumps of every brand.", "meta": "PDF · 8 pages · 6.7 MB", "file": "downloads/VacSolute-Spares-and-Service-Brochure.pdf", "cover": "downloads/vacsolute-cover.jpg", "wide": false },
+      { "title": "Mechvac company profile", "text": "Made-in-India vacuum pumps and systems, group companies and industries served.", "meta": "PDF · 12 pages · 1.5 MB", "file": "downloads/Mechvac-Technologies-Company-Profile.pdf", "cover": "downloads/mechvac-cover.jpg", "wide": true }
+    ]
+  },
+  "contactSection": {
+    "title": "Say hello",
+    "cardsTitle": "My business card",
+    "cardsText": "Tap the card to flip it. Use “Save contact” to add my details to your phone in one tap."
+  },
+  "cards": [
+    { "image": "card-back.jpg", "backImage": "card-front.jpg", "alt": "Business card with office phone, office email and Mechvac corporate office address" }
+  ],
+  "footer": {
+    "note": "Brand names belong to their owners; parts are equivalent replacements."
+  },
+  "applications": {
+    "title": "Where vacuum does the work.",
+    "titleSoft": "And what keeps it working.",
+    "lede": "Every process asks something different of a vacuum pump: a deeper vacuum, more vapour, more hours, harsher gases. Here are the applications I see most on plant visits. For each one: the vacuum range, the pumps usually installed, what goes wrong, and the spares that fix it.",
+    "heroImage": "application/img/mechvac-pumps.jpg",
+    "heroCaption": "Mechvac pumps & process vacuum systems",
+    "heroAlt": "Mechvac vacuum pumps and skid-mounted vacuum systems: rotary vane pumps, a Roots booster and two process vacuum skids with condensers",
+    "listTitle": "Applications",
+    "listIntro": "Filter by industry, then open any application for the details.",
+    "approachTitle": "How I look at an application",
+    "approachIntro": "Horsepower and price come last. The process comes first.",
+    "steps": [
+      { "title": "Walk the process", "text": "What's in the vessel, what leaves it as vapour, how hot, how long the cycle runs." },
+      { "title": "Measure the duty", "text": "Working vacuum, pumping speed, gas and condensable load, corrosiveness, running hours." },
+      { "title": "Match the pump", "text": "Oil-sealed, dry, booster-assisted: and the condenser, trap or filter that protects it." },
+      { "title": "Keep it running", "text": "Right spares in stock, planned overhauls, and an AMC if the pump is critical." }
+    ],
+    "serviceTitle": "Support across the pump's life",
+    "serviceIntro": "Through Mechvac and VacSolutë, for any brand already installed in your plant.",
+    "services": [
+      { "icon": "box", "title": "Spares & kits", "text": "Vanes, bearings, seals, filters, rotors and overhaul kits for rotary vane, dry screw and claw pumps, to the OEM part number." },
+      { "icon": "wrench", "title": "Repair & overhaul", "text": "Workshop or on-site. Tested before and after, with a failure report so the same fault doesn't return." },
+      { "icon": "calendar", "title": "AMC / CMC", "text": "Scheduled visits, a status report each time, and priority breakdown support for critical pumps." },
+      { "icon": "search", "title": "Inspection & audit", "text": "A one-time check of installed pumps: vacuum, current, temperature, noise, with clear recommendations." },
+      { "icon": "spark", "title": "Rotor coatings", "text": "PEEK, PTFE, PFA, electroless nickel and Xylan for dry screw pumps in corrosive service." },
+      { "icon": "swap", "title": "Replacement pumps", "text": "When repair no longer pays: a direct Mechvac equivalent for the installed pump, sized to the real duty." }
+    ],
+    "ctaTitle": "Don't see your process?",
+    "ctaText": "Tell me what the pump is doing and what's going wrong. Send the nameplate photo too, and I'll suggest the right pump, spare or fix.",
+    "footerNote": "Vacuum ranges are typical values; actual duty varies by process.",
+    "items": []
+  },
+  "inquiry": {
+    "title": "Spares enquiry",
+    "lede": "Tell me about the pump and the part you need. Rotary vane, dry screw or claw, any brand. A nameplate photo is the fastest way to get the right kit.",
+    "pumpTypes": ["Rotary vane (oil)", "Rotary vane (dry)", "Dry screw", "Claw", "Dry piston", "Roots booster", "Not sure"],
+    "brands": ["Busch", "Leybold", "Edwards", "Toshniwal", "Atlas Copco", "Becker", "Rietschle", "Pfeiffer", "Economy", "Tekmen", "HHV", "Everest", "Gardner Denver", "Tuthill", "Kinney", "DVP", "Stokes", "Anest Iwata", "Ulvac", "Varian", "Welch", "Hanbell", "Alcatel", "Mechvac"],
+    "note": "The form goes to my office email. WhatsApp sends the same details as a message; attach the photo in the chat.",
+    "nextTitle": "What happens next",
+    "nextSteps": ["I match your pump and part to the OEM part and position number.", "You get the right kit with price and delivery.", "If needed, an engineer visit or workshop repair is arranged."],
+    "thanksTitle": "Thank you, your enquiry is sent.",
+    "thanksText": "I'll check the pump details and reply with the right kit and price. For a breakdown, please call the office directly."
+  }
+}
