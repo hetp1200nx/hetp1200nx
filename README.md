@@ -6,7 +6,7 @@ I help process plants keep their vacuum running. Most of my work happens on plan
 
 This repository is my personal intro site.
 
-**Live site:** [het-patel.work.gd](https://het-patel.work.gd/)
+**Live site:** [hetp1200nx.github.io/hetp1200nx](https://hetp1200nx.github.io/hetp1200nx/)
 
 ## What I can help with
 
@@ -35,7 +35,7 @@ Pharmaceuticals, chemicals, petrochemicals, food and dairy, packaging, plastics 
 | Office email | [Het.patel@mechvactech.com](mailto:Het.patel@mechvactech.com) |
 | LinkedIn | [in/het-patel-81b8071b4](https://www.linkedin.com/in/het-patel-81b8071b4) |
 | Company | [mechvactech.com](https://www.mechvactech.com) |
-| Spares enquiry | [het-patel.work.gd/inquiry](https://het-patel.work.gd/inquiry/) |
+| Spares enquiry | [hetp1200nx.github.io/hetp1200nx/inquiry](https://hetp1200nx.github.io/hetp1200nx/inquiry/) |
 
 ---
 
@@ -54,7 +54,7 @@ Pharmaceuticals, chemicals, petrochemicals, food and dairy, packaging, plastics 
 - One-tap **Save contact** (vCard) and a flippable business card
 - Brochure downloads
 - Light and dark themes, and reduced motion for visitors who turn it on in their settings
-- Direct links to each product and application, for example `het-patel.work.gd/#p-interceptor` and `het-patel.work.gd/application/#transformer`
+- Direct links to each product and application, for example `hetp1200nx.github.io/hetp1200nx/#p-interceptor` and `hetp1200nx.github.io/hetp1200nx/application/#transformer`
 
 ### Repository layout
 
